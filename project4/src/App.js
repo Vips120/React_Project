@@ -17,12 +17,12 @@ class App extends Component {
    searchSomething = async (e) => {
      e.preventDefault();
      this.setState({ loading: true });
-     let item = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyAE6w92nhEQtgNWdliZzrDL9Id0ALTa0Jg`, {
+     let item = await axios.get(`your api path`, {
        params: {
          part:"snippet",
          maxResults: 5,
          q: this.state.searchField,
-         pageToken: "AIzaSyAE6w92nhEQtgNWdliZzrDL9Id0ALTa0Jg"
+         pageToken: "your token"
         }
        
      });
